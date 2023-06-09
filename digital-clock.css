@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body,html{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: black;
+}
+.container{
+    width: 350px;
+    height: 95px;
+    cursor: default;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 8px;
+    animation: animate 1.5s linear infinite;    
+}
+.container .display,
+.container span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .display{
+    z-index: 996;
+    background: #1b1b1b;
+    height: 80px;
+    width: 340px;
+    border-radius: 5px;
+    text-align: center;
+}
+.container .display #time{
+    line-height: 80px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+/* amination part */
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+/* animation part end */
+
+.container span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 9px;
+}
+.container span:first-child{
+    filter: blur(10px);
+}
+.container span:last-child{
+    filter: blur(20px);
+}
